@@ -1,0 +1,164 @@
+[gd_scene load_steps=12 format=3 uid="uid://1ofo1mofstcs"]
+
+[ext_resource type="Texture2D" uid="uid://bccy4ahsouyj8" path="res://Assets/rustic-weathered-wooden-surface.jpg" id="1_j3qhi"]
+[ext_resource type="Script" path="res://Script/Puzzle.gd" id="1_jdrlf"]
+[ext_resource type="Texture2D" uid="uid://cw5b7t4g6yvhu" path="res://Puzzle Looks.png" id="1_xif5b"]
+[ext_resource type="Texture2D" uid="uid://gwbaengere35" path="res://Assets/Ellipse 1.png" id="3_nnj80"]
+[ext_resource type="Texture2D" uid="uid://cjfeokaelk0b7" path="res://Assets/Ellipse 2.png" id="4_hs7wk"]
+[ext_resource type="Texture2D" uid="uid://jayoywp8nlw6" path="res://Assets/Ellipse 3.png" id="5_wo7vl"]
+[ext_resource type="Texture2D" uid="uid://bflvttvd7tpak" path="res://Assets/Ellipse 4.png" id="6_ebi16"]
+[ext_resource type="Texture2D" uid="uid://bhka7lmlbw42u" path="res://Assets/Ellipse 5.png" id="7_8dbjd"]
+[ext_resource type="Texture2D" uid="uid://dtijeg6xbkrha" path="res://Assets/Iron Button.png" id="8_74v8d"]
+[ext_resource type="Texture2D" uid="uid://dov1k8c8fvg0h" path="res://Assets/Maple Leaf.png" id="9_5g2ff"]
+[ext_resource type="AudioStream" uid="uid://spt0euit0lwy" path="res://Assets/horse wheel spin sfx.ogg" id="11_1lwcx"]
+
+[node name="Puzzle" type="Node2D"]
+script = ExtResource("1_jdrlf")
+
+[node name="Wooden Background" type="Sprite2D" parent="."]
+position = Vector2(960.2, 540.8)
+scale = Vector2(0.321865, 0.27173)
+texture = ExtResource("1_j3qhi")
+
+[node name="PuzzleLooks" type="Sprite2D" parent="."]
+position = Vector2(-1199.25, 529.5)
+scale = Vector2(2.05064, 2.15021)
+texture = ExtResource("1_xif5b")
+
+[node name="Horse Wheel" type="Node2D" parent="."]
+position = Vector2(947, 552)
+
+[node name="HorseWheelFrame" type="Sprite2D" parent="Horse Wheel"]
+position = Vector2(31, -20)
+scale = Vector2(5.2, 5.2)
+texture = ExtResource("8_74v8d")
+
+[node name="Ellipse1" type="Sprite2D" parent="Horse Wheel"]
+texture = ExtResource("3_nnj80")
+
+[node name="Ellipse2" type="Sprite2D" parent="Horse Wheel"]
+rotation = 0.628319
+texture = ExtResource("4_hs7wk")
+
+[node name="Ellipse3" type="Sprite2D" parent="Horse Wheel"]
+rotation = 2.51327
+texture = ExtResource("5_wo7vl")
+
+[node name="Ellipse4" type="Sprite2D" parent="Horse Wheel"]
+rotation = 0.942478
+texture = ExtResource("6_ebi16")
+
+[node name="Ellipse5" type="Sprite2D" parent="Horse Wheel"]
+texture = ExtResource("7_8dbjd")
+
+[node name="IronButtonGroup" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="IronButtonFrameTopLeft" type="Sprite2D" parent="IronButtonGroup"]
+position = Vector2(241, 83.5)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_74v8d")
+
+[node name="LeafButtonTopLeft" type="TextureButton" parent="IronButtonGroup/IronButtonFrameTopLeft"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -67.0
+offset_right = -134.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_5g2ff")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="IronButtonFrameTopRight" type="Sprite2D" parent="IronButtonGroup"]
+position = Vector2(720.5, 85.5)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_74v8d")
+
+[node name="LeafButtonTopRight" type="TextureButton" parent="IronButtonGroup/IronButtonFrameTopRight"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -67.0
+offset_right = -134.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_5g2ff")
+ignore_texture_size = true
+stretch_mode = 4
+flip_h = true
+
+[node name="IronButtonFrameBotRight" type="Sprite2D" parent="IronButtonGroup"]
+position = Vector2(721.5, 460)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_74v8d")
+
+[node name="LeafButtonBotRight" type="TextureButton" parent="IronButtonGroup/IronButtonFrameBotRight"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -67.0
+offset_right = -134.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_5g2ff")
+ignore_texture_size = true
+stretch_mode = 4
+flip_h = true
+flip_v = true
+
+[node name="IronButtonFrameBotLeft" type="Sprite2D" parent="IronButtonGroup"]
+position = Vector2(244, 464.5)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_74v8d")
+
+[node name="LeafButtonBotLeft" type="TextureButton" parent="IronButtonGroup/IronButtonFrameBotLeft"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -67.0
+offset_right = -134.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_5g2ff")
+ignore_texture_size = true
+stretch_mode = 4
+flip_v = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_1lwcx")
+
+[node name="SolvedAlert" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 360.0
+offset_top = 126.0
+offset_right = 1557.0
+offset_bottom = 970.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SolvedAlert"]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 360.0
+offset_right = 890.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 56
+text = "PUZZLE IS SOLVED :)"
+
+[connection signal="button_down" from="IronButtonGroup/IronButtonFrameTopLeft/LeafButtonTopLeft" to="." method="_on_leaf_button_top_left_button_down"]
+[connection signal="button_down" from="IronButtonGroup/IronButtonFrameTopRight/LeafButtonTopRight" to="." method="_on_leaf_button_top_right_button_down"]
+[connection signal="button_down" from="IronButtonGroup/IronButtonFrameBotRight/LeafButtonBotRight" to="." method="_on_leaf_button_bot_right_button_down"]
+[connection signal="button_down" from="IronButtonGroup/IronButtonFrameBotLeft/LeafButtonBotLeft" to="." method="_on_leaf_button_bot_left_button_down"]
